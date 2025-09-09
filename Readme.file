@@ -1,0 +1,70 @@
+1. What is the difference between var, let, and const?
+
+Answer:
+---> var is function-scoped or global-scoped and can be updated and re-declared within the same scope. It can be declared without initialization, and it is hoisted with a default value of "undefined". Variables declared with var are accessible before initialization (due to hoisting) but hold the value "undefined" until initialized.
+
+---> let is block-scoped, can be updated but cannot be re-declared within the same scope. It can be declared without initialization but cannot be accessed before initialization (temporal dead zone). Variables declared with let are hoisted but stay in the temporal dead zone until initialization, meaning accessing them before initialization throws a ReferenceError.
+
+---> const is also block-scoped but cannot be updated or re-declared once assigned, and it must be initialized at the time of declaration. Like let, its hoisting behavior keeps it in the temporal dead zone until initialization. For objects and arrays declared with const, the reference cannot be changed, but their contents (properties or elements) can be modified.
+
+
+2. What is the difference between map(), forEach(), and filter()?
+
+Answer:
+.forEach()
+---> Executes a callback for each item.
+Does not return a new array (returns undefined).
+it's just loop, no return.
+
+. map()
+--->it's Executes a callback for each item.
+Original array is unchanged.
+transform array elements.
+
+.filter()
+--->Iterates over array.
+Returns a new array with elements that pass the condition (true).
+Useful for extracting subsets of data
+select elements based on condition.
+
+
+3. What are arrow functions in ES6?
+
+Answer:
+Example---->const add = (a, b) => a + b;
+
+--->Cannot be used as constructors.
+Cannot use arguments object directly (but rest parameters ...args work).
+callbacks, inline functions.
+
+
+4. How does destructuring assignment work in ES6?
+
+Answer:
+Example ---> 
+const user = { name: "Lili", marks: 55 };
+const { name, marks } = user;
+console.log(name); 
+
+Destructuring ---> easy way to unpack values.
+
+
+5. Explain template literals in ES6. How are they different from string concatenation?
+
+Answer:
+---> Introduced with backticks ``
+Allow embedding variables and expressions easily.
+
+Example:
+const name = "JoY";
+const age = 35;
+console.log(`My name is ${name} and I am ${age} years old.`);
+
+--->Readable and maintainable.
+Can embed expressions directly (${a + b}).
+cleaner string handling with expressions + multi-line support.
+
+
+
+
+
